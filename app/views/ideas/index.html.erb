@@ -1,0 +1,14 @@
+
+
+<h1>S Ideas</h1>
+
+<% @ideas.each do |idea| %>
+      <div class="col-md-4">
+        <br>
+        <h4><%= link_to idea.name, idea %></h4>
+        <%= image_tag idea.picture, width: '100%' if idea.picture.present? %>
+
+        <%= idea.content %>
+      </div>
+    <% end %>
+  </div>
